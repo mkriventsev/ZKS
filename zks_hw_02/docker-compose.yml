@@ -1,0 +1,7 @@
+version: '3'
+services:
+ web:
+  image: daptin/todomvc-vuejs
+  ports:
+   - "21095:8080"
+  restart: always
