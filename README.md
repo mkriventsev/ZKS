@@ -41,3 +41,8 @@ More information about visual testing is in the article: <https://docs.cypress.i
 Change the design of a page (e. g. colour or font through CSS)
 3. Run the visual test and make a video of it (through Cypress)
 4. Upload the project to a new GitLab repository and remove (or add to .gitignore) the cypress/integration/examples directory
+
+**Notes:**
+Docker daptin/todomvc-vuejs image runs on port 21095 -> npm install -> `./node_modules/.bin/cypress open` - GUI
+
+⚠️GUI version don't create video 🤔, so for it just use CLI version  - `./node_modules/.bin/cypress run`
