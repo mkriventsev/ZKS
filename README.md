@@ -45,4 +45,4 @@ Change the design of a page (e. g. colour or font through CSS)
 **Notes:**
 Docker daptin/todomvc-vuejs image runs on port 21095 -> npm install -> `./node_modules/.bin/cypress open` - GUI
 
-⚠️GUI version don't create video 🤔, so for it just use CLI version  - `./node_modules/.bin/cypress run`
+⚠️GUI version doesn't create video 🤔, so for it just use CLI version  - `./node_modules/.bin/cypress run`
