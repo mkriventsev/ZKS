@@ -27,14 +27,13 @@ class OrderTests {
                 (price < 200 && discount == Discount.TWENTY_PERCENT_DISCOUNT)) {
             Throwable exception = assertThrows(
                     IllegalArgumentException.class, () -> {
-                        Order order = new Order( new Customer(fullName,state,addressInState,phoneNumber,age), new Cart(price,containsAlcoholOrTobacco),discount,paymentMethod);
+                        Order order = new Order(new Customer(fullName, state, addressInState, phoneNumber, age), new Cart(price, containsAlcoholOrTobacco), discount, paymentMethod);
                     }
             );
             assertEquals(message, exception.getMessage());
             System.out.println(exception.getMessage());
         } else {
-            Order order = new Order( new Customer(fullName,state,addressInState,phoneNumber,age), new Cart(price,containsAlcoholOrTobacco),discount,paymentMethod);
-//            assertEquals(customer.getAge(), age);
+            Order order = new Order(new Customer(fullName, state, addressInState, phoneNumber, age), new Cart(price, containsAlcoholOrTobacco), discount, paymentMethod);
             assertTrue(message.equals("valid inputs"));
             System.out.println(message);
         }

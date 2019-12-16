@@ -32,7 +32,6 @@ class AddressTests {
                 assertFalse(address.isAbroad());
             else
                 assertTrue(address.isAbroad());
-            System.out.println(message);
             assertTrue(message.equals("valid inputs"));
             System.out.println(message);
         }
