@@ -1,43 +1,48 @@
-# ZKS
-### B(E)4M36ZKS - Zajištění kvality software / Software Quality Assurance
-https://moodle.fel.cvut.cz/course/view.php?id=4363
-
-
-
-## Homework 1: [📂/zks_hw_01](https://github.com/mkriventsev/ZKS/tree/master/zks_hw_01)
-**Topic**: Selenium front-end automated testing using Screenplay pattern and Serenity BDD framework
-
+# Homework 3:
+**Topic: JUnit (advanced features)**
 **Task:**
-On the eshop engine demo available on <https://demo.arastta.org> create automated tests using Screenplay (Serenity BDD framework):
+Create parameterized tests of an E-shop backend (SUT) using JUnit 5 and data combinations generated using the ACTS tool. 
 
-**TEST STEPS:**
+_E-shop sources:_ https://gitlab.fel.cvut.cz/rechtva1/sqa_parametrized_tests
 
-1. Get empty shopping cart (Verify that the shopping cart is really empty)
-2. Add 3 different types of items entered as entry parameter of the test to the cart (use search function in the eshop)
-3. Verify that the content of the shopping cart matches to the previous steps
+_ACTS tool:_ https://drive.google.com/file/d/1I9w4NhGI3HaMtncMZadYdDsaKAYAdKAt/view
 
-**Useful links:**
-
-* <http://testerstories.com/2016/06/screenplay-pattern-with-java-part-1/>
-* <http://testerstories.com/2016/06/screenplay-pattern-with-java-part-2/>
-* <http://testerstories.com/2016/07/screenplay-pattern-with-java-part-3/>
-
-**Notes:**
-IntelliJ IDEA + Java 8. WebDrivers are in [/drivers](https://github.com/mkriventsev/ZKS/tree/master/zks_hw_01/drivers) folder, builded via Gradle
-<br/><br/><br/><br/>
-## Homework 2: [📂/zks_hw_02](https://github.com/mkriventsev/ZKS/tree/master/zks_hw_02)
-**Topic**: Cypress front-end automated testing
-
-
-**Task:**
-Visual test of a [todoMVC site](http://todomvc.com/examples/react/#/) through Cypress. Introductory example of how to test the todoMVC site is in the [Lab 6: Alternative End-to-end automated testing Cypress](https://moodle.fel.cvut.cz/mod/resource/view.php?id=133730).
-
-More information about visual testing is in the article: <https://docs.cypress.io/guides/tooling/visual-testing.html>
 
 **HOMEWORK STEPS:**
+1. Find the equivalence classes for variables in the SUT
+2. Model the SUT using the ACTS application
+3. Generate the 2-way test combinations
+4. Use generated combinations to create the parameterized tests
+5. Generate the surefire reports
 
-1. Install the todoMVC locally or in Docker (for bonus points)
-2. Create the “visual” test that will make a snapshot of a page with the list of todo items.
-Change the design of a page (e. g. colour or font through CSS)
-3. Run the visual test and make a video of it (through Cypress)
-4. Upload the project to a new GitLab repository and remove (or add to .gitignore) the cypress/integration/examples directory
+
+
+- First of all the "bugs" in code were fixed, like incorrect boundary values for variables. 
+tests run with command. Then equivalence classes for each variable were founded:
+    -   `fullname` {0},[1;2],[2;32),[32;..)
+    -   `price` (0;50),[50;100),[100,200),[200,..)
+    -   `age` (0;15),[15;18),[18,120],(121,..)
+- Next 4 SUT models were created in ACTS
+![](src/img/address.png)
+![](src/img/customer.png)
+![](src/img/cart.png)
+![](src/img/order.png)
+- generated csvfiles are in `src/test/resources` folder
+- 4 tests were developed: `AddressTests`, `CartTests`, `CustomerTests`, `OrderTests`
+- Surefire report regenrated:
+`mvn clean surefire-report:report site -DgenerateReports=false` 
+
+![](src/img/testrun.png)
+![](src/img/report.png)
+
+---
+**(!)NOTE Downloading the https://gitlab.fel.cvut.cz/rechtva1/sqa_parametrized_tests you will get the problem with running all tests and generating report using maven.**
+When you try to run your test from your favourite IDE, your tests will be executed normally.
+
+(!) When you run them using maven, your tests will not be executed and your output will look like below.
+You need to do couple more things to make it run from commandline.
+
+Maven Surefire and Maven Failsafe provide native support for executing tests on the JUnit Platform.
+junit-jupiter-engine dependency required for maven surefire to run any tests
+
+To deal with it just follow it: https://java-focus.com/parameterizedtest-junit-5/

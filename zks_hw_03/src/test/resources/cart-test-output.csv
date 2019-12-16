@@ -1,0 +1,12 @@
+# ACTS model.CartTests Suite Generation: Mon Dec 16 06:37:09 CET 2019
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 3
+# Maximum number of values per parameter: 3
+# Number of configurations: 5
+containsAlcoholOrTobacco,message,price
+true,Price has to be greater than 50 Czech crowns inclusive.,49.9
+true,valid inputs,50
+false,Price has to be greater than 50 Czech crowns inclusive.,49.9
+false,valid inputs,50
+null,Price doesn't have to be null.,50

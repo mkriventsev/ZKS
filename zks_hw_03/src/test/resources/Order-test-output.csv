@@ -1,0 +1,53 @@
+# ACTS Test Suite Generation: Mon Dec 16 14:40:32 CET 2019
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 10
+# Maximum number of values per parameter: 8
+# Number of configurations: 46
+fullName,state,addressInState,phoneNumber,age,price,containsAlcoholOrTobacco,discount,paymentMethod,message
+Floyd Augusta Maks Stella Perry,CZECH_REPUBLIC,Valid Adress,420776333222,17,50,true,NO_DISCOUNT,PAY_PALL,Customer buying alcohol or tobacco products must be at least 18.
+Ma,GERMANY,Valid Adress,420776333222,15,100,true,HUNDRED_CROWNS_DISCOUNT,BANK_TRANSFER,Customer buying alcohol or tobacco products must be at least 18.
+Ma,SLOVAKIA,Valid Adress,420776333222,17,99,true,NO_DISCOUNT,BANK_TRANSFER,Customer buying alcohol or tobacco products must be at least 18.
+Floyd Augusta Maks Stella Perry,GREAT_BRITAIN,Valid Adress,420776333222,15,200,true,TWENTY_PERCENT_DISCOUNT,PAY_PALL,Customer buying alcohol or tobacco products must be at least 18.
+Ma,USA,Valid Adress,420776333222,17,199,true,HUNDRED_CROWNS_DISCOUNT,PAY_PALL,Customer buying alcohol or tobacco products must be at least 18.
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,18,50,false,NO_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Floyd Augusta Maks Stella Perry,SLOVAKIA,Valid Adress,420776333222,120,100,false,HUNDRED_CROWNS_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Ma,GREAT_BRITAIN,Valid Adress,420776333222,18,99,false,NO_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Ma,USA,Valid Adress,420776333222,120,200,false,TWENTY_PERCENT_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,15,199,false,NO_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,120,49.9,false,NO_DISCOUNT,BANK_TRANSFER,Price has to be greater than 50 Czech crowns inclusive.
+Ma,SLOVAKIA,Valid Adress,420776333222,15,50,false,HUNDRED_CROWNS_DISCOUNT,PAY_PALL,If price is less then 100 Czech crown exclusive customer cannot use 100 Czech crowns discount.
+Floyd Augusta Maks Stella Perry,USA,Valid Adress,420776333222,18,99,true,HUNDRED_CROWNS_DISCOUNT,BANK_TRANSFER,If price is less then 100 Czech crown exclusive customer cannot use 100 Czech crowns discount.
+Floyd Augusta Maks Stella Perry,GREAT_BRITAIN,Valid Adress,420776333222,120,50,true,TWENTY_PERCENT_DISCOUNT,BANK_TRANSFER,If price is less then 200 Czech crown exclusive customer cannot use 20% discount.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,18,100,false,TWENTY_PERCENT_DISCOUNT,PAY_PALL,If price is less then 200 Czech crown exclusive customer cannot use 20% discount.
+Ma,GERMANY,Valid Adress,420776333222,17,99,false,TWENTY_PERCENT_DISCOUNT,PAY_PALL,If price is less then 200 Czech crown exclusive customer cannot use 20% discount.
+Floyd Augusta Maks Stella Perry,SLOVAKIA,Valid Adress,420776333222,18,199,false,TWENTY_PERCENT_DISCOUNT,BANK_TRANSFER,If price is less then 200 Czech crown exclusive customer cannot use 20% discount.
+Floyd Augusta Maks Stella Perry,USA,Valid Adress,420776333222,15,50,false,NO_DISCOUNT,PAY_PALL,valid inputs
+Ma,GREAT_BRITAIN,Valid Adress,420776333222,17,100,false,HUNDRED_CROWNS_DISCOUNT,BANK_TRANSFER,valid inputs
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,120,99,true,NO_DISCOUNT,CASH,valid inputs
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,18,200,true,TWENTY_PERCENT_DISCOUNT,BANK_TRANSFER,valid inputs
+Floyd Augusta Maks Stella Perry,SLOVAKIA,Valid Adress,420776333222,120,199,false,HUNDRED_CROWNS_DISCOUNT,PAY_PALL,valid inputs
+Floyd Augusta Maks Stella Perry,USA,Valid Adress,420776333222,15,100,false,TWENTY_PERCENT_DISCOUNT,PAY_PALL,If price is less then 200 Czech crown exclusive customer cannot use 20% discount.
+Floyd Augusta Maks Stella Perry,USA,Valid Adress,420776333222,17,49.9,false,NO_DISCOUNT,PAY_PALL,Price has to be greater than 50 Czech crowns inclusive.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,15,200,true,HUNDRED_CROWNS_DISCOUNT,CASH,Customer buying alcohol or tobacco products must be at least 18.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,18,199,false,TWENTY_PERCENT_DISCOUNT,CASH,If price is less then 200 Czech crown exclusive customer cannot use 20% discount.
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,18,49.9,true,NO_DISCOUNT,BANK_TRANSFER,Price has to be greater than 50 Czech crowns inclusive.
+Ma,SLOVAKIA,Valid Adress,420776333222,17,200,false,NO_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Ma,SLOVAKIA,Valid Adress,420776333222,15,49.9,false,NO_DISCOUNT,BANK_TRANSFER,Price has to be greater than 50 Czech crowns inclusive.
+Ma,GREAT_BRITAIN,Valid Adress,420776333222,18,199,true,NO_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Ma,GREAT_BRITAIN,Valid Adress,420776333222,15,49.9,false,NO_DISCOUNT,PAY_PALL,Price has to be greater than 50 Czech crowns inclusive.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,120,50,false,HUNDRED_CROWNS_DISCOUNT,CASH,If price is less then 100 Czech crown exclusive customer cannot use 100 Czech crowns discount.
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,17,50,false,HUNDRED_CROWNS_DISCOUNT,PAY_PALL,If price is less then 100 Czech crown exclusive customer cannot use 100 Czech crowns discount.
+Ma,GREAT_BRITAIN,Valid Adress,420776333222,15,99,false,HUNDRED_CROWNS_DISCOUNT,BANK_TRANSFER,If price is less then 100 Czech crown exclusive customer cannot use 100 Czech crowns discount.
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,120,100,true,NO_DISCOUNT,CASH,Customer buying from abroad cannot pay cash.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,120,49.9,true,NO_DISCOUNT,CASH,Price has to be greater than 50 Czech crowns inclusive.
+Floyd Augusta Maks Stella Perry,CZECH_REPUBLIC,Valid Adress,420776333222,120,100,false,NO_DISCOUNT,,Payment method doesn't have to be null.
+Ma,GERMANY,Valid Adress,420776333222,17,200,false,TWENTY_PERCENT_DISCOUNT,,Payment method doesn't have to be null.
+Floyd Augusta Maks Stella Perry,SLOVAKIA,Valid Adress,420776333222,18,199,true,HUNDRED_CROWNS_DISCOUNT,,Payment method doesn't have to be null.
+Floyd Augusta Maks Stella Perry,GREAT_BRITAIN,Valid Adress,420776333222,15,50,false,,BANK_TRANSFER,Discount doesn't have to be null.
+Ma,USA,Valid Adress,420776333222,120,99,true,,PAY_PALL,Discount doesn't have to be null.
+Ma,CZECH_REPUBLIC,Valid Adress,420776333222,17,200,false,,CASH,Discount doesn't have to be null.
+Floyd Augusta Maks Stella Perry,GREAT_BRITAIN,Valid Adress,420776333222,15,50,false,NO_DISCOUNT,,Payment method doesn't have to be null.
+Ma,USA,Valid Adress,420776333222,17,99,false,NO_DISCOUNT,,Payment method doesn't have to be null.
+Floyd Augusta Maks Stella Perry,GERMANY,Valid Adress,420776333222,18,100,true,,BANK_TRANSFER,Discount doesn't have to be null.
+Ma,SLOVAKIA,Valid Adress,420776333222,15,199,false,,PAY_PALL,Discount doesn't have to be null.
