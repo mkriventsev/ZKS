@@ -1,7 +1,0 @@
-model/Address.class
-model/PaymentMethod.class
-model/Order.class
-model/Cart.class
-model/Discount.class
-model/Customer.class
-model/State.class
