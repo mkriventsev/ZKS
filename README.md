@@ -46,3 +46,51 @@ Change the design of a page (e. g. colour or font through CSS)
 Docker daptin/todomvc-vuejs image runs on port 21095 -> npm install -> `./node_modules/.bin/cypress open` - GUI
 
 ⚠️GUI version doesn't create video 🤔, so for it just use CLI version  - `./node_modules/.bin/cypress run`
+
+<br/><br/><br/><br/>
+## Homework 3: [📂/zks_hw_03](https://github.com/mkriventsev/ZKS/tree/master/zks_hw_03)
+**Topic**: JUnit (advanced features)
+
+
+**Task:**
+Create parameterized tests of an E-shop backend (SUT) using JUnit 5 and data combinations generated using the ACTS tool.
+
+E-shop sources: https://gitlab.fel.cvut.cz/rechtva1/sqa_parametrized_tests
+ACTS tool: https://drive.google.com/file/d/1I9w4NhGI3HaMtncMZadYdDsaKAYAdKAt/view
+
+**HOMEWORK STEPS:**
+1. Find the equivalence classes for variables in the SUT
+2. Model the SUT using the ACTS application
+3. Generate the 2-way test combinations
+4. Use generated combinations to create the parameterized tests
+5. Generate the surefire reports
+
+**Notes:**
+**(!)NOTE Downloading the https://gitlab.fel.cvut.cz/rechtva1/sqa_parametrized_tests you will get the problem with running all tests and generating report using Ьaven.**
+When you try to run your test from your favourite IDE, your tests will be executed normally.
+You need to do couple more things to make it run from commandline.
+
+Maven Surefire and Maven Failsafe provide native support for executing tests on the JUnit Platform.
+junit-jupiter-engine dependency required for maven surefire to run any tests
+
+```<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>${junit.jupiter.version}</version>
+    <scope>test</scope>
+</dependency>
+
+<build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.0</version>
+        </plugin>
+        <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.22.0</version>
+        </plugin>
+    </plugins>
+</build>
+```
+To deal with it just follow it: https://java-focus.com/parameterizedtest-junit-5/
